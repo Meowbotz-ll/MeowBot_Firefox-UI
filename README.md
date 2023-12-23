@@ -13,9 +13,6 @@ A simple and minimalistic firefox theme
 - Tab only shown as icon
 - Hover will show the full information of the tab
 
-## Add-On
-
-[Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) use this firefox Add-on to get the best result
 
 ## Installation
 
@@ -28,7 +25,9 @@ A simple and minimalistic firefox theme
    ![1703339502813](image/README/1703339502813.png)
 5. Customise everything to your liking. (optional)
 
-### Thanks to
+## Add-On
 
-Some code refer from
+[Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) use this firefox Add-on to get the best result
+### Thanks to
+[Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/)
 [Cascadade Firefox Css](https://github.com/andreasgrafen/cascade)
