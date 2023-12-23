@@ -9,7 +9,7 @@
 
 /*  .tab-close-button{display: none !important}  /*  Removes the x-button from the tabs  */
 
-#tabs-newtab-button, #new-tab-button{display:none;opacity: 0 !important}  /*  Hide newtab button  */
+/* #tabs-newtab-button, #new-tab-button{display:none;opacity: 0 !important}   Hide newtab button  */
 
 #navigator-toolbox{background-image: url("./Background.png"), url("./NavbarBackground.png")}  /*  Custom background -- Also check userContent.css  */
 
