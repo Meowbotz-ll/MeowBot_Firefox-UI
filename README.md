@@ -19,7 +19,7 @@ A simple and minimalistic firefox theme
 
 1. Type about:config into your URL bar. Click on the I accept the risk button if you're shown a warning.
 2. Seach for toolkit.legacyUserProfileCustomizations.stylesheets and set it to true.
-3. Go to your profile folder:
+3. Go to your profile folder about:profiles
   ![1703339401856](image/README/1703339401856.png)
 1. Copy the chrome folder into your profile and restart Firefox
    ![1703339502813](image/README/1703339502813.png)
