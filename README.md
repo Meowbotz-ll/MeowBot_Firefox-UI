@@ -5,9 +5,7 @@ A simple and minimalistic firefox theme
 ![1703337559806](image/README/1703337559806.png)
 
 ## Privacy Tab
-
-![1703336856764](image/README/1703336856764.png)
-
+![gif](image/README/Animation.webp)
 - Tab only shown as icon
 - Hover will show the full information of the tab
 
