@@ -4,7 +4,7 @@ A simple and minimalistic firefox theme
 
 ![1703337559806](image/README/1703337559806.png)
 
-[Feature](#privacy-tab) # [Installation](#installation) # [Thanks to](#thanks-to)
+[Feature](#privacy-tab) # [Installation](#installation) # [Add-On](#add-on) # [Thanks to](#thanks-to)
 
 ## Privacy Tab
 
