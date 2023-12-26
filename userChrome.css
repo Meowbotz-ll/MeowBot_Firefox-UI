@@ -11,7 +11,7 @@
 
 /* #tabs-newtab-button, #new-tab-button{display:none;opacity: 0 !important}   Hide newtab button  */
 
-#navigator-toolbox{background-image: url("./Background.png"), url("./NavbarBackground.png")}  /*  Custom background -- Also check userContent.css  */
+/* #navigator-toolbox{background-image: url("./Background.png"), url("./NavbarBackground.png")}   Custom background -- Also check userContent.css  */
 
 :root{
 --tab-border-radius: 3px !important; /*  Tab border radius -- Changes the tabs rounding  *//*  Default: 3px  */
@@ -33,8 +33,8 @@
 #tabbrowser-tabs{border-inline-start-width: 0!important}
 
 /* Newtab hack */
-#tabs-newtab-button, #new-tab-button{transition: .3s !important;color: transparent !important; fill: FieldText !important; background: none !important; opacity: 20%; padding-right: 20px  !important; padding-left: 4px !important; -moz-window-dragging:}
-#tabs-newtab-button:hover, #new-tab-button:hover{transition: .3s !important; color: transparent !important; fill: FieldText !important; opacity: 90%; padding-right: 20px !important;  background: none !important; padding-left: 4px !important; -moz-window-dragging: var(--WindowDraggingFromNewtabButton)}
+#tabs-newtab-button, #new-tab-button{transition: .3s !important;color: transparent !important; fill: FieldText !important; background: none !important; opacity: 20%; -moz-window-dragging:}
+#tabs-newtab-button:hover, #new-tab-button:hover{transition: .3s !important; color: transparent !important; fill: FieldText !important; opacity: 90%;  background: none !important; -moz-window-dragging: var(--WindowDraggingFromNewtabButton)}
 #tabs-newtab-button > .toolbarbutton-icon , #new-tab-button > .toolbarbutton-icon{ background: none !important;}
 
 /*  Removes urlbar border/background  */
@@ -44,6 +44,16 @@
 .tabbrowser-tab:not([pinned]):not([selected]) .tab-label, .toolbarbutton-icon{opacity: 0!important; transition: .15s !important;}
 .tabbrowser-tab:not([pinned]):hover .tab-label, .toolbarbutton-icon{opacity: 100!important; transition: .15s !important; display: inline-block!important;}
 .tabbrowser-tab:not([hover]) .tab-label, .toolbarbutton-icon{padding-left: 0!important}
+
+/* Default icon for tabs without a favicon */
+.tabbrowser-tab:not([image]) .tab-icon-image {
+    display: inline-block !important;
+    width: 16px; /* Icon size */
+    height: 16px; /* Icon size */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('default-icon.png'); /* Path to your default icon */
+}
 
 /*  Removes space after pinned tabs  */
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {margin-inline-start: 0!important}
@@ -167,8 +177,8 @@ fill: currentColor !important; -moz-context-properties: fill !important; list-st
 
 /* Optional: Adjust the color, size, and intensity of the glowing bar */
 :root {
-  --active-tab-bar-glow-color: #ddb6f2; 
-  --active-tab-bar-glow-size: 6px; /* Size of the glow */
+  --active-tab-bar-glow-color: #ffffff; 
+  --active-tab-bar-glow-size: 10px; /* Size of the glow */
   --active-tab-bar-width: 40%; /* Width of the glowing bar */
   --active-tab-bar-height: 4px; /* Height of the glowing bar */
 }
@@ -180,7 +190,6 @@ fill: currentColor !important; -moz-context-properties: fill !important; list-st
   width: var(--active-tab-bar-width);
   height: var(--active-tab-bar-height);
 }
-
 
 /* show favicon when media is playing but tab is hovered */
 .tab-icon-image:not([pinned]) { opacity: 1 !important; }
@@ -297,4 +306,22 @@ fill: currentColor !important; -moz-context-properties: fill !important; list-st
     background: transparent !important;
 }
 
+/* Hover color for Minimize button icon */
+.titlebar-button.titlebar-min:hover > .toolbarbutton-icon {
+  color: green !important;
+}
 
+/* Hover color for Maximize/Restore button icon */
+.titlebar-button.titlebar-max:hover > .toolbarbutton-icon,
+.titlebar-button.titlebar-restore:hover > .toolbarbutton-icon {
+  color: yellow !important;
+}
+
+/* Hover color for Close button icon */
+.titlebar-button.titlebar-close:hover > .toolbarbutton-icon {
+  color: red !important;
+}
+
+.titlebar-buttonbox {
+  appearance: none !important;
+}
