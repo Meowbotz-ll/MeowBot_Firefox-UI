@@ -1,3 +1,4 @@
+
 :root{--WindowDraggingFromNewtabButton: no-drag}  /*  For windows  *//*
 :root{--WindowDraggingFromNewtabButton: drag !important}  /* For linux */
 
@@ -306,22 +307,87 @@ fill: currentColor !important; -moz-context-properties: fill !important; list-st
     background: transparent !important;
 }
 
-/* Hover color for Minimize button icon */
-.titlebar-button.titlebar-min:hover > .toolbarbutton-icon {
-  color: green !important;
+/* Custom Button */
+.titlebar-min {
+  list-style-image: url("icons/mac-minimize.svg") !important;
+}
+.titlebar-min:hover{
+  list-style-image: url("icons/mac-minimize_hover.svg") !important;
+}
+.titlebar-max {
+  list-style-image: url("icons/mac-maximize.svg") !important;
+}
+.titlebar-max:hover{
+  list-style-image: url("icons/mac-maximize_hover.svg") !important;
+}
+.titlebar-restore {
+  list-style-image: url("icons/mac-restore.svg") !important;
+}
+.titlebar-restore:hover{
+  list-style-image: url("icons/mac-restore_hover.svg") !important;
+}
+.titlebar-close {
+  list-style-image: url("icons/mac-close.svg") !important;
+}
+.titlebar-close:hover{
+  list-style-image: url("icons/mac-close_hover.svg") !important;
 }
 
-/* Hover color for Maximize/Restore button icon */
-.titlebar-button.titlebar-max:hover > .toolbarbutton-icon,
-.titlebar-button.titlebar-restore:hover > .toolbarbutton-icon {
-  color: yellow !important;
+/* autohidetoolbar */
+
+#PersonalToolbar{
+  --bm-padding: 4px; /* Vertical padding to be applied to bookmarks */
+  --autohide-toolbar-delay: 1000ms; /* The toolbar is hidden after 1s */
+  --autohide-toolbar-focus-rotation: 0deg; /* urlbar is focused */
+  --autohide-toolbar-hover-rotation: 0deg; /* cursor is over the toolbar area */
+}
+:root {
+  --firefoxcss-bookmarks-bg-color: transparent !important;
+}
+:root[uidensity="touch"] #PersonalToolbar{ --bm-padding: 7px }
+#PersonalToolbar:not([customizing]){
+  position: relative;
+  margin-bottom: -34px;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: transform 135ms linear var(--autohide-toolbar-delay) !important;
+  z-index: 1;
+  height: 34px;
+}
+.browser-toolbar:not(.titlebar-color):not(.browser-toolba) {
+  background-color: var(--toolbar-bgcolor) !important;
+}
+:root[uidensity="compact"] #PersonalToolbar{
+  --toolbarbutton-outer-padding: 1px !important;
+}
+#PersonalToolbar:not(:-moz-lwtheme){
+  --toolbar-bgcolor: #f9f9fb;
+}
+@media (prefers-color-scheme: dark){
+  #PersonalToolbar:not(:-moz-lwtheme){
+    --toolbar-bgcolor: rgb(43, 42, 51);
+  }
+}
+#PlacesToolbarItems > .bookmark-item,
+#OtherBookmarks,
+#PersonalToolbar > #import-button{
+  padding-block: var(--bm-padding) !important;
 }
 
-/* Hover color for Close button icon */
-.titlebar-button.titlebar-close:hover > .toolbarbutton-icon {
-  color: red !important;
+#nav-bar:focus-within + #PersonalToolbar{
+  transition-delay: 100ms !important;
+  transform: rotateX(var(--autohide-toolbar-focus-rotation,0));
+}
+#navigator-toolbox:is(:hover,:focus-within){
+  border-bottom: 0;
+}
+#navigator-toolbox:hover > #PersonalToolbar
+{
+  transition-delay: 100ms !important;
+  transform: rotateX(var(--autohide-toolbar-hover-rotation,0));
 }
 
-.titlebar-buttonbox {
-  appearance: none !important;
+#navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar,
+#navigator-toolbox:hover > #nav-bar:focus-within + #titlebar{  
+  transform: rotateX(0);
 }
