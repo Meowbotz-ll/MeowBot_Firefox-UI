@@ -334,12 +334,12 @@ fill: currentColor !important; -moz-context-properties: fill !important; list-st
 }
 
 /* autohidetoolbar */
-
+/* 
 #PersonalToolbar{
-  --bm-padding: 4px; /* Vertical padding to be applied to bookmarks */
-  --autohide-toolbar-delay: 1000ms; /* The toolbar is hidden after 1s */
-  --autohide-toolbar-focus-rotation: 0deg; /* urlbar is focused */
-  --autohide-toolbar-hover-rotation: 0deg; /* cursor is over the toolbar area */
+  --bm-padding: 4px; 
+  --autohide-toolbar-delay: 1000ms;
+  --autohide-toolbar-focus-rotation: 0deg; 
+  --autohide-toolbar-hover-rotation: 0deg; 
 }
 :root {
   --firefoxcss-bookmarks-bg-color: transparent !important;
@@ -390,4 +390,4 @@ fill: currentColor !important; -moz-context-properties: fill !important; list-st
 #navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar,
 #navigator-toolbox:hover > #nav-bar:focus-within + #titlebar{  
   transform: rotateX(0);
-}
+} */
