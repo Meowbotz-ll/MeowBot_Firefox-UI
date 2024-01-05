@@ -79,9 +79,9 @@
 #urlbar:not(:hover):not([breakout][breakout-extend])>#urlbar-background {box-shadow: none!important; background: #0000 !important}
 
 /*  Urlbar popup thing  */
-.urlbarView-row{display: none !important}
+/* .urlbarView-row{display: none !important}
 .urlbarView-row:nth-child(1), .urlbarView-row:nth-child(2){display: flex !important}
-#urlbar-anon-search-settings{margin-inline-start: 0px !important}
+#urlbar-anon-search-settings{margin-inline-start: 0px !important} */
 
 /*  Makes the space between the reload button and the urlbar less akwardly large  */
 #urlbar-container{margin-left: 1px !important}
